@@ -114,15 +114,19 @@ let touchStartX;
 slides.map(slide => {
   slide.addEventListener("touchstart", foo);
   slide.addEventListener("touchstend", foo2);
-  slide.addEventListener("mousedown", foo);
-  slide.addEventListener("mouseup", foo2);
+  // slide.addEventListener("mousedown", foo);
+  // slide.addEventListener("mouseup", foo2);
 });
 
 function foo(e) {
-  touchStartX = e.clientX;
+  touchStartX = e.changedTouches[0].clientX;
+  console.log(e.changedTouches[0].clientX);
+  console.log(e.currentTarget);
 }
 function foo2(e) {
-  let touchEndX = e.clientX;
+  console.log(e.currentTarget);
+
+  let touchEndX = e.changedTouches[0].clientX;
   const target = e.currentTarget;
   if (touchEndX > touchStartX) checkAndToggle2(target, "next");
   else if (touchEndX < touchStartX) checkAndToggle2(target, "prev");
