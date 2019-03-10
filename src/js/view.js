@@ -107,3 +107,44 @@ function requestSawCount() {
     count.textContent = Number(count.textContent) + increment;
   }, 3000);
 }
+
+//============================================
+const slides = [...document.querySelectorAll(".slides")];
+let touchStartX;
+slides.map(slide => {
+  slide.addEventListener("touchstart", foo);
+  slide.addEventListener("touchstend", foo2);
+  slide.addEventListener("mousedown", foo);
+  slide.addEventListener("mouseup", foo2);
+});
+
+function foo(e) {
+  touchStartX = e.clientX;
+}
+function foo2(e) {
+  let touchEndX = e.clientX;
+  const target = e.currentTarget;
+  if (touchEndX > touchStartX) checkAndToggle2(target, "next");
+  else if (touchEndX < touchStartX) checkAndToggle2(target, "prev");
+  else return;
+}
+function checkAndToggle2(elem, state) {
+  const shownSlide = [...elem.children].find(slide =>
+    slide.className.includes("slide--showing")
+  );
+  if (state === "prev") {
+    if (shownSlide.previousElementSibling) {
+      shownSlide.classList.add("slide--hidden");
+      shownSlide.classList.remove("slide--showing");
+      shownSlide.previousElementSibling.classList.remove("slide--hidden");
+      shownSlide.previousElementSibling.classList.add("slide--showing");
+    }
+  } else if (state === "next") {
+    if (shownSlide.nextElementSibling) {
+      shownSlide.classList.add("slide--hidden");
+      shownSlide.classList.remove("slide--showing");
+      shownSlide.nextElementSibling.classList.remove("slide--hidden");
+      shownSlide.nextElementSibling.classList.add("slide--showing");
+    }
+  }
+}
