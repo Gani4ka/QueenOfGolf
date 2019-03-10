@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Test</title>
-  <link href="styles.css?332a7d415396000987cc" rel="stylesheet"></head>
+  <link href="styles.css?ad18900eade1ddddfe51" rel="stylesheet"></head>
 
   <body>
     <header class="header" role="banner">
@@ -19,6 +19,7 @@
   <div class="info">
     <time class="info__date" datetime="2015-08-12">12 august 2015</time>
     <svg width="20px" height="10px">
+      <!-- <use href="../src/img/sprite.svg#icon-eye"></use> -->
       <use href="../src/img/sprite.svg#icon-eye"></use>
     </svg>
     <span class="info__saw-count">5201</span>
@@ -110,7 +111,7 @@
   </div>
   <!-- GALLERY first -->
   <div class="gallery-wrapper">
-    <ul id="slides">
+    <ul class="slides">
       <li class="slide slide--showing">
         <picture>
           <source
@@ -169,16 +170,8 @@
         </p>
       </li>
     </ul>
-    <button
-      id="btn--prev"
-      class="btn btn--prev"
-      aria-label="preveous slide"
-    ></button>
-    <button
-      id="btn--next"
-      class="btn btn--next"
-      aria-label="next slide"
-    ></button>
+    <button class="btn btn--prev" aria-label="preveous slide"></button>
+    <button class="btn btn--next" aria-label="next slide"></button>
   </div>
 
   <!-- FACTS LIST second-->
@@ -253,7 +246,7 @@
 
   <!-- GALLERY second -->
   <div class="gallery-wrapper">
-    <ul id="slides">
+    <ul class="slides">
       <li class="slide slide--showing">
         <picture>
           <source
@@ -309,16 +302,8 @@
         </p>
       </li>
     </ul>
-    <button
-      id="btn--prev"
-      class="btn btn--prev"
-      aria-label="preveous slide"
-    ></button>
-    <button
-      id="btn--next"
-      class="btn btn--next"
-      aria-label="next slide"
-    ></button>
+    <button class="btn btn--prev" aria-label="preveous slide"></button>
+    <button class="btn btn--next" aria-label="next slide"></button>
   </div>
   <!-- FACTS LIST third-->
   <div class="main__wrapper">
@@ -376,10 +361,10 @@
   <div class="video-container" id="video-wrapper"></div>
   <div class="logo">
     <a href="#">
-      <img src="/src/img/logo.png" alt="page logo" />
+      <img src="./img/logo.png" alt="page logo" />
     </a>
   </div>
 </section>
 
-  <script type="text/javascript" src="bundle.js?332a7d415396000987cc"></script></body>
+  <script type="text/javascript" src="bundle.js?ad18900eade1ddddfe51"></script></body>
 </html>

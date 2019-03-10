@@ -1,5 +1,5 @@
 import * as template from "../js/template/sosial-links.hbs";
-import sosialLinksList from "../js/template/s.json";
+import sosialLinksList from "../js/template/links-data.json";
 
 function createLinks(data) {
   const container = document.querySelector("#sosial-links");
@@ -19,7 +19,7 @@ btnsNext.map(btn => btn.addEventListener("click", handlerChangeOnNextImg));
 
 function checkAndToggle(event, state) {
   const allNodes = [...event.target.parentNode.children];
-  const slides = allNodes.filter(node => node.id === "slides")[0];
+  const slides = allNodes.filter(node => node.className === "slides")[0];
   const shownSlide = [...slides.children].find(slide =>
     slide.className.includes("slide--showing")
   );
@@ -103,7 +103,7 @@ window.addEventListener("DOMContentLoaded", requestSawCount);
 function requestSawCount() {
   const count = document.querySelector(".info__saw-count");
   let increment = 1;
-  setInterval(function() {
+  const intervalId = setInterval(function() {
     count.textContent = Number(count.textContent) + increment;
   }, 3000);
 }
