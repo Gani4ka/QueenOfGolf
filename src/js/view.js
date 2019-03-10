@@ -120,13 +120,14 @@ slides.map(slide => {
 
 function foo(e) {
   touchStartX = e.changedTouches[0].clientX;
-  console.log(e.changedTouches[0].clientX);
-  console.log(e.currentTarget);
+  console.log(touchStartX);
+  // console.log(e.currentTarget);
 }
 function foo2(e) {
-  console.log(e.currentTarget);
-  console.log("2");
+  // console.log(e.currentTarget);
+  // console.log("2");
   let touchEndX = e.changedTouches[0].clientX;
+  console.log(touchEndX);
   const target = e.currentTarget;
   if (touchEndX > touchStartX) checkAndToggle2(target, "prev");
   else if (touchEndX < touchStartX) checkAndToggle2(target, "next");
