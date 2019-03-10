@@ -1,7 +1,7 @@
 import "./scss/styles.scss";
 import "@babel/polyfill";
 
-// import "./js/progress-bar-cal.js";
-
-// import View from "./js/view";
-import "./js/view";
+import "./js/sosial-links";
+import "./js/saw-count";
+import "./js/gallery.js";
+import "./js/video.js";
