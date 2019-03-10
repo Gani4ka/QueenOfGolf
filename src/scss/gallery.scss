@@ -10,6 +10,7 @@
 
   &__image {
     display: inline-block;
+    pointer-events: none;
     @include for-size(bigTablet) {
       width: 60%;
     }

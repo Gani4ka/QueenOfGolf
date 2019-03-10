@@ -689,7 +689,8 @@ html {
 .slide {
   text-align: center; }
   .slide__image {
-    display: inline-block; }
+    display: inline-block;
+    pointer-events: none; }
     @media (max-width: 1023px) {
       .slide__image {
         width: 60%; } }

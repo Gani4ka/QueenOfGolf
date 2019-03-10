@@ -113,7 +113,7 @@ const slides = [...document.querySelectorAll(".slides")];
 let touchStartX;
 slides.map(slide => {
   slide.addEventListener("touchstart", foo);
-  slide.addEventListener("touchstend", foo2);
+  slide.addEventListener("touchend", foo2);
   // slide.addEventListener("mousedown", foo);
   // slide.addEventListener("mouseup", foo2);
 });
@@ -125,7 +125,7 @@ function foo(e) {
 }
 function foo2(e) {
   console.log(e.currentTarget);
-
+  console.log("2");
   let touchEndX = e.changedTouches[0].clientX;
   const target = e.currentTarget;
   if (touchEndX > touchStartX) checkAndToggle2(target, "next");
