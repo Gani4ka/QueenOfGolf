@@ -1,0 +1,41 @@
+html {
+  font-size: 16px;
+  @include for-size(smallDesktop) {
+    font-size: 14px;
+  }
+  @include for-size(tablet) {
+    font-size: 12px;
+  }
+  @include for-size(mobile) {
+    font-size: 14px;
+  }
+}
+//colors
+$main-color: #ffffff;
+$bg-light-color: #edf0f2;
+$text-color: #383838;
+$accent-color: #af1b15;
+
+//fonts
+$titles-font: tex_gyre_herosbold, sans-serif;
+$text-font: "PT Serif", serif;
+
+$font-weight-black: 900;
+$font-weight-bold: 700;
+$font-weight-light: 300;
+//fonts sizes
+//for mobile
+$big-title-size-m: rem(26); //use
+$small-title-size-m: rem(22);
+$small-text-size-m: rem(12);
+$big-text-size-m: rem(14);
+$big-numbers-size-m: rem(36);
+//for tablet
+// $tablet-medium-text-size: 17px;
+//for desktop
+$big-title-size: rem(48);
+$small-title-size: rem(30);
+$small-text-size: rem(12);
+$midle-text-size: rem(18);
+$big-text-size: rem(20);
+$big-numbers-size: rem(154);

@@ -1,0 +1,43 @@
+.video-wrapper {
+  padding-top: rem(50);
+  text-align: center;
+  height: auto;
+  background-color: $accent-color;
+}
+
+.video-container {
+  margin-bottom: rem(120);
+  @include for-size(bigTablet) {
+    margin-bottom: rem(50);
+  }
+  @include for-size(bigTablet) {
+    margin-bottom: rem(25);
+  }
+}
+
+.video {
+  @include for-size(smallDesktop) {
+    width: 50%;
+    height: 400px;
+  }
+  @include for-size(bigTablet) {
+    width: 70%;
+    height: 400px;
+  }
+  @include for-size(tablet) {
+    width: 80%;
+    height: 350px;
+  }
+  @include for-size(mobile) {
+    width: 90%;
+    height: 250px;
+  }
+}
+.logo {
+  padding: rem(25) 0 rem(25) 0;
+  text-align: center;
+  background-color: $accent-color;
+  & a {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,84 @@
+.gallery-wrapper {
+  padding-top: rem(35);
+  padding-bottom: rem(35);
+  position: relative;
+  background-color: $accent-color;
+}
+
+.slide {
+  text-align: center;
+
+  &__image {
+    display: inline-block;
+    @include for-size(bigTablet) {
+      width: 60%;
+    }
+    @include for-size(mobile) {
+      width: 90%;
+    }
+  }
+
+  &--showing {
+    position: static;
+    opacity: 1;
+    z-index: 2;
+  }
+
+  &--hidden {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    z-index: 2;
+  }
+
+  &__text {
+    max-width: 52%;
+    margin: 0 auto;
+    padding-top: rem(35);
+    font-size: $midle-text-size;
+    color: $main-color;
+
+    @include for-size(smallDesktop) {
+      max-width: 80%;
+    }
+    @include for-size(mobile) {
+      max-width: 94%;
+    }
+  }
+}
+
+.btn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: rem(46);
+  border: none;
+  background-color: transparent;
+  background-position: 0;
+  background-repeat: no-repeat;
+
+  &--prev {
+    left: 20.4%;
+    background-image: url(../img/arrow-prev.png);
+
+    @include for-size(smallDesktop) {
+      left: 6%;
+    }
+    @include for-size(mobile) {
+      left: 2px;
+    }
+  }
+  &--next {
+    right: 20.4%;
+    background-image: url(../img/arrow-next.png);
+
+    @include for-size(smallDesktop) {
+      right: 6%;
+    }
+    @include for-size(mobile) {
+      right: 2px;
+    }
+  }
+}
