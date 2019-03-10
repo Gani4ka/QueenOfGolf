@@ -128,8 +128,8 @@ function foo2(e) {
   console.log("2");
   let touchEndX = e.changedTouches[0].clientX;
   const target = e.currentTarget;
-  if (touchEndX > touchStartX) checkAndToggle2(target, "next");
-  else if (touchEndX < touchStartX) checkAndToggle2(target, "prev");
+  if (touchEndX > touchStartX) checkAndToggle2(target, "prev");
+  else if (touchEndX < touchStartX) checkAndToggle2(target, "next");
   else return;
 }
 function checkAndToggle2(elem, state) {
