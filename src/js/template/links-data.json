@@ -2,12 +2,12 @@
   {
     "name": "facebook",
     "link": "https://www.facebook.com",
-    "svgLink": "../img/sprite.svg#icon-facebook"
+    "svgLink": "img/sprite.svg#icon-facebook"
   },
   {
     "name": "twitter",
     "link": "#",
-    "svgLink": "/img/sprite.svg#icon-twitter"
+    "svgLink": "img/sprite.svg#icon-twitter"
   },
   {
     "name": "google",
