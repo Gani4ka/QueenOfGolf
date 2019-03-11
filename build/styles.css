@@ -462,7 +462,7 @@ html {
   font-family: tex_gyre_herosbold, sans-serif;
   letter-spacing: 2px;
   color: #ffffff;
-  background-image: url(./img/baner.jpg);
+  background-image: url(./img/baner@1x.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
@@ -477,7 +477,7 @@ html {
       background-image: url(./img/banerS.jpg); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 192dpi) {
     .header {
-      background-image: url(./img/baner.jpg); } }
+      background-image: url(./img/baner@1x.jpg); } }
   @media (max-width: 575px) {
     .header {
       background-position-x: 60%;
@@ -736,7 +736,8 @@ html {
   border: none;
   background-color: transparent;
   background-position: 0;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  cursor: pointer; }
   .btn--prev {
     left: 20.4%;
     background-image: url(./img/arrow-prev.png); }
