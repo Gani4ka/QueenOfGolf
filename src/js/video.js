@@ -37,15 +37,16 @@ function requestVideo() {
       .then(response => response.json())
       .then(data => {
         const id = data.items[0].snippet.resourceId.videoId;
-        addVideo(id);
+        const title = data.items[0].snippet.title;
+        addVideo(id, title);
       })
       .catch(error => console.log("ERROR" + error));
   }
 
-  function addVideo(id) {
+  function addVideo(id, title) {
     const wrap = document.querySelector("#video-wrapper");
     wrap.innerHTML = `
-    <iframe class="video" width="715" height="450" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe class="video" title="${title}" width="715" height="450" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   `;
   }
 }

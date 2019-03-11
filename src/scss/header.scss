@@ -12,13 +12,20 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url(../img/baner@2x.jpg);
+  }
+  @include for-size(tablet) {
+    background-image: url(../img/banerS.jpg);
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url(../img/baner.jpg);
+    }
+  }
   @include for-size(mobile) {
     background-position-x: 60%;
     padding: rem(8) 4% rem(24) 4%;
   }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    background-image: url(../img/baner@2x.jpg);
-  }
+
   &__title {
     max-width: 38%;
     margin-bottom: rem(280);
