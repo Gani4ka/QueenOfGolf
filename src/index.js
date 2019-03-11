@@ -1,5 +1,6 @@
 import "./scss/styles.scss";
 import "@babel/polyfill";
+import "./js/svgxuse";
 
 import "./js/sosial-links";
 import "./js/saw-count";
